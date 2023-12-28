@@ -9,6 +9,7 @@ repositories {
     mavenCentral()
 }
 
+
 dependencies {
     testImplementation(platform("org.junit:junit-bom:5.11.3"))
     testImplementation("org.junit.jupiter:junit-jupiter")
@@ -26,3 +27,4 @@ java {
         languageVersion.set(JavaLanguageVersion.of(8))
     }
 }
+
