@@ -18,14 +18,14 @@ https://enterprisecraftsmanship.com/posts/you-naming-tests-wrong/
 For example, you can name a test case for the `validate` operation in the `EmailAddressValidator` class as follows:
 ``` Java
 @Test
-void email_address_without_at_sign_is_invalid`(){...}
+void email_address_without_at_sign_is_invalid(){...}
 ```
 
 ## Exercise: Testing an Email Address Validator with JUnit
 
 In this exercise, you will write a JUnit test suite for a Java class named `EmailAddressValidator`, which provides an operation to validate an email address.
 
-1. In the `EmailAddressValidator` class, located in the package `de.phl.programmierprojekt.email`, implement the email address validation logic as per the following requirements:
+1. In the `EmailAddressValidator` class, located in the package `de.phl.programmingproject.email`, implement the email address validation logic as per the following requirements:
    - An email address must contain a single "@" character.
    - The "@" character cannot be the first or last character in the email address.
    - The email address must have a valid top-level domain (e.g., ".com", ".edu", ".org").
@@ -48,23 +48,18 @@ Make sure that your test cases are well-organized, easy to read, and cover all p
 
 ## Exercise: Testing an ArrayUtilities with JUnit
 
-In the package `de.phl.programmierprojekt.arrayutils`, you will find the `ArrayUtilities` class that contains various utility operations for working with arrays. Your task is to write a JUnit test suite that thoroughly tests all of the operations in this class.
+In the package `de.phl.programmingproject.arrayutils`, you will find the `ArrayUtilities` class that contains various utility operations for working with arrays. Your task is to write a JUnit test suite that thoroughly tests all of the operations in this class.
 
 1. Create a new Java file named `ArrayUtilitiesTest.java` in the gradle project's test folder (if it does not exist) and write test cases for the `sum` operation in the `ArrayUtilities` class.
 2. Run the JUnit test suite, and ensure that all tests pass.
 3. Add more test cases to the `ArrayUtilitiesTest` class to test the remaining operations in the `ArrayUtilities` class:
-   * A test case for the reverse operation that tests an empty array.
-   * A test case for the reverse operation that tests an array with a single element.
-   * A test case for the sum operation that tests an empty array, if not already done in task 1.
-   * A test case for the contains operation that tests an array that does not contain the specified value.
-   * A test case for the contains operation that tests an empty array.
-   * A test case for the contains operation that tests an array with a single element.
-5. Add more test cases to the `ArrayUtilitiesTest` class to test edge cases and corner cases for the operations.
-
-* A test case for the reverse operation that tests an array with an odd number of elements.
-
-* A test case for the reverse operation that tests an array with an even number of elements.
-
-* A test case for the sum operation that tests an array with negative numbers if not already done in task 1.
-
-**Next Sheet**: [_Identify errors and classify them into error classes (e.g., static dynamic errors)_](
+   * A test case for the `reverse` operation that tests an empty array.
+   * A test case for the `reverse` operation that tests an array with a single element.
+   * A test case for the `sum` operation that tests an empty array, if not already done in task 1.
+   * A test case for the `contains` operation that tests an array that does not contain the specified value.
+   * A test case for the `contains` operation that tests an empty array.
+   * A test case for the `contains` operation that tests an array with a single element.
+4. Add more test cases to the `ArrayUtilitiesTest` class to test edge cases and corner cases for the operations.
+   * A test case for the `reverse` operation that tests an array with an odd number of elements (at least 3 elements).
+   * A test case for the `reverse` operation that tests an array with an even number of elements (at least 2 elements).
+   * A test case for the `sum` operation that tests an array with negative numbers if not already done in task 1.
