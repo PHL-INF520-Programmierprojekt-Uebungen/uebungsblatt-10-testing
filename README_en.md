@@ -30,8 +30,11 @@ In this exercise, you will write a JUnit test suite for a Java class named `Emai
    - The "@" character cannot be the first or last character in the email address.
    - The email address must have a valid top-level domain (e.g., ".com", ".edu", ".org").
    - The email address cannot contain any spaces.
-     
-*Note*: you can try to implement the email address validation logic yourself, or you can use a regular expression to validate the email address.
+
+*Note 1*: Please implement all logic in the `public static boolean validate(final String email)` method and do not add any additional methods to the `EmailAddressValidator` class.
+This is to ensure that the test cases can be executed correctly. A solution with additional methods may very well be correct, but it will not be accepted by the test cases.
+
+*Note 2*: you can try to implement the email address validation logic yourself, or you can use a regular expression to validate the email address.
 
 2. Create a new Java file named `EmailAddressValidatorTest.java` in the respective test folder in your gradle project (if it does not exist), and write test cases for the `validate` operation of the `EmailAddressValidator` class. You should include test cases that cover the following scenarios:
    - Valid email addresses that meet all the validation requirements.

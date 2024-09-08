@@ -31,7 +31,10 @@ In dieser Übung schreiben Sie eine JUnit-Test-Suite für eine Java-Klasse namen
     - Die E-Mail-Adresse muss eine gültige Top-Level-Domain haben (z.B. ".com", ".edu", ".org").
     - Die E-Mail-Adresse darf keine Leerzeichen enthalten.
 
-*Hinweis*: Sie können versuchen, die Logik zur Validierung von E-Mail-Adressen selbst zu implementieren, oder Sie können einen regulären Ausdruck verwenden, um die E-Mail-Adresse zu validieren.
+*Hinweis 1*: Bitte implementieren Sie die gesamte Logik in der  `public static boolean validate(final String email)` Methode und fügen Sie keine zusätzlichen Methoden zur `EmailAddressValidator`-Klasse hinzu.
+Damit stellen Sie sicher, dass die Testfälle dieser Übungsaufgabe richtig ausgeführt werden. Eine Lösung mit weiteren Methoden kann durchaus richtig sein, wird aber von den Testfällen nicht akzeptiert.
+
+*Hinweis 2*: Sie können versuchen, die Logik zur Validierung von E-Mail-Adressen selbst zu implementieren, oder Sie können einen regulären Ausdruck verwenden, um die E-Mail-Adresse zu validieren.
 
 2. Erstellen Sie eine neue Java-Datei namens `EmailAddressValidatorTest.java` im entsprechenden Testordner Ihres Gradle-Projekts (falls sie nicht bereits existiert) und schreiben Sie Testfälle für die `validate`-Operation der Klasse `EmailAddressValidator`. Sie sollten Testfälle einschließen, die die folgenden Szenarien abdecken:
     - Gültige E-Mail-Adressen, die alle Validierungsanforderungen erfüllen.
