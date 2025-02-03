@@ -92,7 +92,7 @@ public class EmailAddressValidatorTestTest {
     void task_2_validate_method_with_string_containing_multiple_at_signs_tested(){
         executeAllTests();
         try{
-            dummyStatic.verify(() -> EmailAddressValidator.validate(argThat(argument -> argument.contains("@") && argument.indexOf("@") != argument.lastIndexOf("@"))), atLeast(1));
+            dummyStatic.verify(() -> EmailAddressValidator.validate(argThat(argument -> argument != null && argument.contains("@") && argument.indexOf("@") != argument.lastIndexOf("@"))), atLeast(1));
         }
         catch (Exception e){
             fail("The 'validate' method of the EmailAddressValidator class is not tested with a string containing multiple at signs.");
@@ -103,7 +103,7 @@ public class EmailAddressValidatorTestTest {
     void task_2_validate_method_with_string_containing_at_sign_at_start_tested(){
         executeAllTests();
         try{
-            dummyStatic.verify(() -> EmailAddressValidator.validate(argThat(argument -> argument.startsWith("@"))), atLeast(1));
+            dummyStatic.verify(() -> EmailAddressValidator.validate(argThat(argument -> argument != null && argument.startsWith("@"))), atLeast(1));
         }
         catch (Exception e){
             fail("The 'validate' method of the EmailAddressValidator class is not tested with a string containing an at sign at the start.");
@@ -114,7 +114,7 @@ public class EmailAddressValidatorTestTest {
     void task_2_validate_method_with_string_containing_at_sign_at_end_tested(){
         executeAllTests();
         try{
-            dummyStatic.verify(() -> EmailAddressValidator.validate(argThat(argument -> argument.endsWith("@"))), atLeast(1));
+            dummyStatic.verify(() -> EmailAddressValidator.validate(argThat(argument -> argument != null && argument.endsWith("@"))), atLeast(1));
         }
         catch (Exception e){
             fail("The 'validate' method of the EmailAddressValidator class is not tested with a string containing an at sign at the end.");
@@ -125,7 +125,7 @@ public class EmailAddressValidatorTestTest {
     void task_2_validate_method_with_string_containing_spaces_tested(){
         executeAllTests();
         try{
-            dummyStatic.verify(() -> EmailAddressValidator.validate(argThat(argument -> argument.contains(" "))), atLeast(1));
+            dummyStatic.verify(() -> EmailAddressValidator.validate(argThat(argument -> argument != null && argument.contains(" "))), atLeast(1));
         }
         catch (Exception e){
             fail("The 'validate' method of the EmailAddressValidator class is not tested with a string containing spaces.");
@@ -133,5 +133,3 @@ public class EmailAddressValidatorTestTest {
     }
 
 }
-
-
