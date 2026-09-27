@@ -1,0 +1,32 @@
+name: Dev-Container prüfen
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: devcontainer-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  devcontainer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - name: Frischen Container bauen und technische Tests ausführen
+        uses: devcontainers/ci@v0.3
+        with:
+          push: never
+          noCache: true
+          runCmd: |
+            set -eu
+            java -version
+            test -x /usr/local/openjdk-21/bin/java
+            /usr/local/openjdk-21/bin/java -version
+            bash ./gradlew --version
+            JAVA_TOOL_OPTIONS=-Dfile.encoding=US-ASCII bash ./gradlew clean test --tests '*.TestEnvironmentTest' --no-daemon --console=plain -Dorg.gradle.java.installations.auto-download=false
