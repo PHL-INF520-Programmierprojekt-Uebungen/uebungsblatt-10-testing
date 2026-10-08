@@ -21,6 +21,9 @@
 			],
 			"settings": {
 				"java.server.launchMode": "Standard",
+				"git.autofetch": true,
+				"git.autofetchPeriod": 300,
+				"git.postCommitCommand": "sync",
 				"java.import.gradle.java.home": "/usr/local/openjdk-21"
 			}
 		}
